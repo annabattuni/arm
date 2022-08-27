@@ -2,6 +2,10 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "vnet_name": {
+            "type": "string",
+            "defaultValue": "vnet-dummy"
+        },
         "subnet_name": {
             "type": "string",
             "defaultvalue": "vnet-subnet"
@@ -15,8 +19,10 @@
     "variables": {},
     "resources": [
         {
-            "name": "[parameters('subnet_name')]",
+            "virtualnetwork":"[parameters('vnet_name')]",
             "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "[parameters('subnet_name')]",
+            "location": "[resourceGroup().location]",
             "apiVersion": "2020-11-01",
             "properties": {
             "addressSpace": {
