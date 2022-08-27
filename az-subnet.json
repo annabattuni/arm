@@ -13,25 +13,7 @@
             "properties": {
                 "addressPrefix": ["10.10.100.0/26"]
             }
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks/subnets",
-            "location": "[resourceGroup().location]",
-            "apiVersion": "2020-11-01",
-            "name":"vnet-kfctta-dev-wus3-001/sn-frontend",
-            "properties": {
-                "addressPrefix": ["192.168.100.0/26"]
-            }
-        },
-        {
-            "type": "Microsoft.Network/virtualNetworks/subnets",
-            "location": "[resourceGroup().location]",
-            "apiVersion": "2020-11-01",
-            "name":"vnet-kfctta-qe-wus3-001/sn-frontend",
-            "properties": {
-                "addressPrefix": ["192.168.200.0/26"]
-            }
-        }
+                }
     ],
     "outputs": {}
 }
