@@ -1,33 +1,35 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
-        "vnet_name": {
-            "type": "string",
-            "defaultValue": "vnet-dummy"
-        },
-        "subnet_name": {
-            "type": "string",
-            "defaultvalue": "vnet-subnet"
-        },
-        "subnet_addr_pfx": {
-            "type": "array",
-            "defaultValue": [ "1.1.0.0/8" ]
-        }
-    },
+    "parameters": {},
     "functions": [],
     "variables": {},
     "resources": [
         {
-            "virtualnetwork":"[parameters('vnet_name')]",
             "type": "Microsoft.Network/virtualNetworks/subnets",
-            "name": "[parameters('subnet_name')]",
             "location": "[resourceGroup().location]",
             "apiVersion": "2020-11-01",
+            "name":"vnet-kfctta-mgmt-wus3-001/sn-frontend",
             "properties": {
-            "addressSpace": {
-                    "addressPrefix": "[parameters('subnet_addr_pfx')]"
-                }
+                "addressPrefix": ["10.10.100.0/26"]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2020-11-01",
+            "name":"vnet-kfctta-dev-wus3-001/sn-frontend",
+            "properties": {
+                "addressPrefix": ["192.168.100.0/26"]
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2020-11-01",
+            "name":"vnet-kfctta-qe-wus3-001/sn-frontend",
+            "properties": {
+                "addressPrefix": ["192.168.200.0/26"]
             }
         }
     ],
