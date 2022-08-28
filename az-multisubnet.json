@@ -5,7 +5,7 @@
         "vnet_subnet_addr_pfx": {
             "type": "array",
             "defaultValue": [
-                "1.1.0.0/8"
+                "1.0.0.0/16"
             ]
         }
     },
@@ -16,7 +16,7 @@
            "type": "Microsoft.Network/virtualNetworks/subnets",
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
-                        "name": "sn-frontend",
+                        "name": "vnetdeploy/sn-frontend",
             "properties": {
 
                 "addressSpace": {
