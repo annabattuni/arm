@@ -2,17 +2,13 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "vnet_name": {
-            "type": "string",
-            "defaultValue": "vnet-dummy"
-        },
         "vnet_subnet_addr_pfx": {
             "type": "array",
             "defaultValue": [
                 "1.1.0.0/8"
             ]
         }
-            },
+    },
     "functions": [],
     "variables": {},
     "resources": [
@@ -23,7 +19,7 @@
             "properties": {
 
                 "addressSpace": {
-                    "addressPrefixes": "[parameters('vnet_subnet_addr_pfx')]"
+                    "addressPrefix": "[parameters('vnet_subnet_addr_pfx')]"
                 }
             }
         }
