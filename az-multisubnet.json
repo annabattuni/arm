@@ -28,7 +28,7 @@
             "location": "[resourceGroup().location]",
             "properties": {
 
-                "addressPrefix": "[parameters('subnet_addr_pfx')]"
+                "addressPrefix": "10.10.100.0/26"
 
             }
         }
