@@ -2,7 +2,15 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "vnet_subnet_addr_pfx": {
+        "vnet_name": {
+            "type": "string",
+            "defaultValue": "vnet-dummy"
+        },
+        "subnet_name": {
+            "type": "string",
+            "defaultValue": "subnet-dummy"
+        },
+        "subnet_addr_pfx": {
             "type": "array",
             "defaultValue": [
                 "1.0.0.0/16"
@@ -13,15 +21,15 @@
     "variables": {},
     "resources": [
         {
-           "type": "Microsoft.Network/virtualNetworks/subnets",
+            "type": "Microsoft.Network/virtualNetworks/subnets",
+            "name": "[concat(parameters('vnet_name'),'/',parameters('subnet_name'))]",
+
             "apiVersion": "2020-11-01",
             "location": "[resourceGroup().location]",
-                        "name": "vnetdeploy/sn-frontend",
             "properties": {
 
-                "addressSpace": {
-                    "addressPrefixes": "[parameters('vnet_subnet_addr_pfx')]"
-                }
+                "addressPrefix": "[parameters('subnet_addr_pfx')]"
+
             }
         }
     ],
