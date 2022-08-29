@@ -17,7 +17,10 @@
          ]      
         },
         "subnet_addr_pfx": {
-            "type": "array"
+            "type": "array",
+            "defaultValue":[
+                "1.1.0.0/16"
+            ]
         }
     },
     "functions": [],
@@ -41,7 +44,7 @@
         {
             "type": "Microsoft.Network/virtualNetworks/subnets",
              "apiVersion": "2020-11-01",
-            "name": "sn-frontend",
+            "name": "[concat(parameters('vnet_name'),'/sn-frontend')]",
             "properties": {
                 "addressprefix": "[parameters('subnet_addr_pfx')]"
             }
