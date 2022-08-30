@@ -6,10 +6,6 @@
             "type": "string",
             "defaultValue": "vnet-dummy"
         },
-        "env_tag_value": {
-            "type": "string",
-            "defaultValue":"tag-dummy"
-        },
         "vnet_addr_pfx": {
             "type": "array",
          "defaultValue": [
@@ -32,10 +28,6 @@
             "apiVersion": "2020-11-01",
             "name": "[concat(parameters('vnet_name'),'/sn-frontend')]",
             "location": "[resourceGroup().location]",
-            "tags": {
-                "Environment": "[parameters('env_tag_value')]",
-                "Automation": "ARM"
-            },
             "properties": {
                 "addressSpace": {
                     "addressPrefix": "[parameters('vnet_addr_pfx')]"
