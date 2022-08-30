@@ -41,7 +41,7 @@
                     "addressPrefix": "[parameters('vnet_addr_pfx')]"
                 },
             
-                "addressprefixes": "[parameters('subnet_addr_pfx')]"
+                "addressprefix": "[parameters('subnet_addr_pfx')]"
             
             
             }
