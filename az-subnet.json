@@ -19,6 +19,7 @@
             
             "type": "Microsoft.Network/virtualNetworks/subnets",
              "apiVersion": "2020-11-01",
+             "location":"resourcegroup().location",
             "name":"[concat(parameters('vnet_name'),'/',parameters('subnet_name'))]",
             "properties": {
                 "addressprefix": "[parameters('subnet_addr_pfx')]"
