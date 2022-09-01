@@ -3,14 +3,20 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vnet_name": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "vnet-dummy"
         },
         "vnet_addr_pfx": {
-            "type": "array"
-         
+            "type": "array",
+         "defaultValue": [
+           "1.0.0.0/8" 
+         ]      
         },
         "subnet_addr_pfx": {
-            "type": "array"
+            "type": "array",
+            "defaultValue":[
+                "1.1.0.0/16"
+            ]
         }
     },
     "functions": [],
