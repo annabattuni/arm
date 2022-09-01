@@ -22,9 +22,9 @@
              "location":"resourcegroup().location",
             "name":"[concat(parameters('vnet_name'),'/',parameters('subnet_name'))]",
             "properties": {
-                "addressSpace": {
-                    "addressPrefixes": "[parameters('subnet_addr_pfx')]"
-                }
+               
+                    "addressPrefix": "[parameters('subnet_addr_pfx')]"
+                
             }
                 }
     ],
