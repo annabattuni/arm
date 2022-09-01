@@ -3,20 +3,14 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vnet_name": {
-            "type": "string",
-            "defaultValue": "vnet-dummy"
+            "type": "string"
         },
         "vnet_addr_pfx": {
-            "type": "array",
-         "defaultValue": [
-           "1.0.0.0/8" 
-         ]      
+            "type": "array"
+         
         },
         "subnet_addr_pfx": {
-            "type": "array",
-            "defaultValue":[
-                "1.1.0.0/16"
-            ]
+            "type": "array"
         }
     },
     "functions": [],
@@ -30,15 +24,13 @@
             "location": "[resourceGroup().location]",
             "properties": {
                 "addressSpace": {
-                    "addressPrefix": "[parameters('vnet_addr_pfx')]",
-                    "addressprefixes": "[parameters('subnet_addr_pfx')]"
-                }
-            
+                    "addressPrefix": "[parameters('vnet_addr_pfx')]"
+                },
+                    "addressprefix": "[parameters('subnet_addr_pfx')]"
                 
-            
-            
             }
         }
     ],
     "outputs": {}
 }
+
