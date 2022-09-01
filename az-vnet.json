@@ -3,13 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "vnet_name": {
-            "type": "string"
+            "type": "string",
+            "defaultValue":"vnet-dummy"
         },
                 "env_tag_value": {
-            "type": "string"
+            "type": "string",
+            "defaultValue":"tag-dummy"
         },
         "vnet_addr_pfx": {
-            "type": "array"
+            "type": "array",
+            "defaultValue":["1.0.0.0/8"]
         }
     },
     "functions": [],
