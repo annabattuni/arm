@@ -6,12 +6,10 @@
             "type": "string"
         },
         "subnet_addr_pfx": {
-            "type": "array",
-            "defaultValue":["1.1.0.0/16"]
+            "type": "array"
         },
         "vnet_name": {
-            "type": "string",
-            "defaultValue":"vnet-dummy"
+            "type": "string"
         }
     },
     "functions": [],
