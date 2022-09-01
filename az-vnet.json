@@ -5,10 +5,7 @@
         "vnet_name": {
             "type": "string"
         },
-        "rg_name": {
-            "type": "string"
-        },
-        "env_tag_value": {
+                "env_tag_value": {
             "type": "string"
         },
         "vnet_addr_pfx": {
@@ -22,7 +19,7 @@
             "name": "[parameters('vnet_name')]",
             "type": "Microsoft.Network/virtualNetworks",
             "apiVersion": "2020-11-01",
-            "location": "[[parameters('rg_name')]().location]",
+            "location": "[resourceGroup().location]",
             "tags": {
                 "Environment": "[parameters('env_tag_value')]",
                 "Automation": "ARM"
