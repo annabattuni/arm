@@ -5,7 +5,7 @@
         "subnet_name": {
             "type": "string"
         },
-        "subnet_addr_pfxes": {
+        "subnet_addr_pfx": {
             "type": "array"
         },
         "vnet_name": {
@@ -22,7 +22,7 @@
              "location":"resourcegroup().location",
             "name":"[concat(parameters('vnet_name'),'/',parameters('subnet_name'))]",
             "properties": {
-                "addressprefix": "[parameters('subnet_addr_pfxes')]"
+                "addressprefix": "[parameters('subnet_addr_pfx')]"
             }
                 }
     ],
