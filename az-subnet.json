@@ -3,8 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "subnet_name": {
-            "type": "string",
-            "defaultValue":"subnet-dummy"
+            "type": "string"
         },
         "subnet_addr_pfx": {
             "type": "array",
