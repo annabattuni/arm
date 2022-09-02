@@ -7,8 +7,8 @@
             "defaultValue" :"subnet-dummy"
         },
         "subnet_addr_pfx": {
-            "type": "array",
-            "defaultValue":["10.0.0.0/8"]
+            "type": "string",
+            "defaultValue":"10.0.0.0/8"
         },
         "vnet_name": {
             "type": "string",
