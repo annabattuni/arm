@@ -8,9 +8,6 @@
         "env_tag_value": {
             "type": "string"
         },
-        "private_ip_addr": {
-            "type": "string"
-        },
         "privateip_allocation_method": {
             "type": "string",
             "allowedValues": [
@@ -57,8 +54,7 @@
                             },
                             "networkSecurityGroup": {
                                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsg_name'))]"
-                            },
-                            "privateIPAddress":"[parameters('private_ip_addr')]"
+                            }
                         }
                     }
                 ]
