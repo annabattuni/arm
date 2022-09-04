@@ -7,17 +7,7 @@
         },
         "env_tag_value": {
             "type": "string"
-        },
-        "privateip_allocation_method": {
-            "type": "string",
-            "allowedValues": [
-                "dynamic",
-                "static"
-            ]
-        },
-        "ip_config_name":{
-            "type":"string"
-        },
+               },
         "pip_name": {
             "type": "string"
         },
@@ -46,9 +36,9 @@
             "properties": {
                 "ipConfigurations": [
                     {
-                        "name": "[parameters('ip_config_name')]",
+                        "name": "ipconfig1",
                         "properties": {
-                            "privateIPAllocationMethod": "[parameters('privateip_allocation_method')]",
+                            "privateIPAllocationMethod": "dynamic",
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets',parameters('vnet_name'),parameters('subnet_name'))]"
                             },
