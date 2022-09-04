@@ -15,6 +15,9 @@
                 "static"
             ]
         },
+        "ip_config_name":{
+            "type":"string"
+        },
         "pip_name": {
             "type": "string"
         },
@@ -43,7 +46,7 @@
             "properties": {
                 "ipConfigurations": [
                     {
-                        "name": "ipConfig1",
+                        "name": "[parameters('ip_config_name')]",
                         "properties": {
                             "privateIPAllocationMethod": "[parameters('privateip_allocation_method')]",
                             "subnet": {
